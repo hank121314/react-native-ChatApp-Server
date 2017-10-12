@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "no-shadow": 0,
+    "no-console": 0,
+    "no-plusplus": 0,
+    "no-use-before-define": 0,
+    "no-underscore-dangle": 0,
+    "consistent-return": 0,
+    "promise/no-native": 0,
+    "promise/catch-or-return": 0,
+    "import/prefer-default-export": 0,
+    "lodash-fp/use-fp": 0,
+    "max-len": ["warn", { "code": 100, "ignoreUrls": true, "ignoreComments": true }],
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "comma-dangle": ["error", "always-multiline"]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "globals": {
+    "FormData": true,
+    "fetch": true,
+    "navigator": true,
+    "__DEV__": true
+  }
+}
