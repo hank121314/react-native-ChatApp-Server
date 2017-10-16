@@ -5,11 +5,11 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var open = require('open');
-var serverPort = 7879;
-const uploadServerPort = 3000;
+var serverPort = 443;
+const uploadServerPort = 80;
 var options = {
-  key: fs.readFileSync('./fake-keys/domain.key'),
-  cert: fs.readFileSync('./fake-keys/domain.crt'),
+  key: fs.readFileSync('./ssl/private.key'),
+  cert: fs.readFileSync('./ssl/certificate.crt'),
 };
 var uploadServer = require('http').Server(app);
 var server = require('https').Server(options, app);
