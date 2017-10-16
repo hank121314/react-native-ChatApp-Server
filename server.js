@@ -10,6 +10,7 @@ const uploadServerPort = 80;
 var options = {
   key: fs.readFileSync('./ssl/private.key'),
   cert: fs.readFileSync('./ssl/certificate.crt'),
+  ca: fs.readFileSync('./ssl/ca_bundle.crt'),
 };
 var uploadServer = require('http').Server(app);
 var server = require('https').Server(options, app);
