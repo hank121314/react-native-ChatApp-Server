@@ -15,8 +15,9 @@ createFolder(uploadFolder);
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    var uploadFolder = './data/image/';
-    console.log('file', file);
+    const str = file.originalname.split('-');
+    console.log(str);
+    var uploadFolder = './data/image/' + str + '/';
     cb(null, uploadFolder); // 保存的路径，备注：需要自己创建
   },
   filename: function(req, file, cb) {
